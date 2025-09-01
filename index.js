@@ -14,13 +14,23 @@ function createGrid(divSize) {
         return 
     }
 
+    if (divSize < 1 || divSize > 100) {
+        alert(error)
+        return
+    }
+
+    gridContainer.innerHTML = ""
     const divWidthHeight = `${800/divSize}px`
 
     for (let i=0; i<divSize*divSize; i++) {
         let element = document.createElement("div")
+        element.addEventListener("mouseenter", () => {
+            element.style.backgroundColor = "black";
+        })
+
         element.style.width = divWidthHeight
         element.style.height = divWidthHeight
-        element.style.backgroundColor = "blue"
+        element.style.backgroundColor = "gray"
         gridContainer.appendChild(element)
     }
 
