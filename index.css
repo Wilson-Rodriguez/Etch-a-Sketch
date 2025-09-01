@@ -13,7 +13,7 @@ body {
 #gridContainer {
     width: 800px;
     height: 800px;
-    background-color: rgb(175, 162, 223);
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
